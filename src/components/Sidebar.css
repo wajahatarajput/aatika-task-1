@@ -1,0 +1,47 @@
+/* src/components/Sidebar.css */
+.sidebar {
+    background-color: var(--secondary-color);
+    /* Dark gray background */
+    width: 200px;
+    /* Set a fixed width for sidebar */
+    height: 100vh;
+    /* Full height */
+    padding-top: 1.5rem;
+    /* Top padding */
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.sidebar-link {
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    /* Padding for spacing */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.25rem 0;
+    /* Space between links */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    /* Smooth transition */
+}
+
+.sidebar-link:hover {
+    background-color: #808080;
+    /* Gray background on hover */
+    color: white;
+    /* Orange text on hover */
+}
+
+.sidebar-link.active {
+    background-color: orange;
+    /* Orange background for active link */
+    color: #ffffff;
+    /* White text for active link */
+    font-weight: bold;
+    /* Bold active link */
+    border-radius: 4px;
+    /* Rounded corners */
+}

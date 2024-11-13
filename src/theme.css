@@ -1,0 +1,125 @@
+/* theme.css */
+:root {
+  --primary-color: #ff6f00;
+  /* Orange */
+  --secondary-color: #6c757d;
+  /* Gray */
+  --background-color: #f8f9fa;
+  /* Light gray for backgrounds */
+  --text-color: #343a40;
+  /* Dark gray for text */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
+  color: #fff;
+}
+
+.navbar a {
+  color: #fff !important;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+  /* Slide out of view */
+  width: 0;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  background-color: var(--secondary-color);
+  color: #fff;
+  height: 100vh;
+  width: 250px;
+  /* Default sidebar width */
+  transition: transform 0.3s ease, width 0.3s ease;
+  position: relative;
+}
+
+.sidebar a {
+  color: #fff;
+}
+
+.sidebar a:hover {
+  color: var(--primary-color);
+}
+
+.card {
+  border-color: var(--primary-color);
+}
+
+.card .card-body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.card .btn-secondary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.card .btn-secondary:hover {
+  background-color: #e65c00;
+}
+
+.modal-content {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+}
+
+.modal .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.modal .btn-primary:hover {
+  background-color: #e65c00;
+}
+
+
+/* src/App.css */
+
+.main-content {
+  transition: margin-left 0.3s ease;
+  height: 712px;
+  /* Or any other height */
+  overflow-y: scroll;
+  /* Enable scrolling */
+}
+
+/* Hide the scrollbar, but still allow scrolling */
+.main-content::-webkit-scrollbar {
+  width: 0.5 px;
+  /* Set the width of the scrollbar */
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Light color for the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+.main-content::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Slightly darker track color */
+  border-radius: 10px;
+  /* Rounded corners for the track */
+}
+
+.main-content::-webkit-scrollbar-button {
+  display: none;
+  /* Hide the scrollbar buttons */
+}
+
+
+.main-content.expanded {
+  margin-left: 0;
+}
